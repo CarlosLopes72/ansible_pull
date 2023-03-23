@@ -1,9 +1,20 @@
-- hosts: localhost
+- hosts : localhost
   connection: local
   become: true
 
+  pre_tasks:
+    - name: update repository
+      apt: 
+      update_cache: yes
+    changed_when: false
+    when : ansible_distribution == "Debian"
+
+    - name: update repository
+      dnf: 
+      update_cache: yes 
+    changed_when: false
+    when : ansible_distribution == "CentOS"
+
   tasks:
-  - name: Install htop
-    apt:
-      name: htop
+    - include: tasks/packages.yml
 
