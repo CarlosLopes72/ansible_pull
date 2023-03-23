@@ -1,5 +1,5 @@
 - name: Install packages for Debian
-  package:
+  apt:
     name: 
       - htop
       - mc
@@ -17,7 +17,7 @@
     when: ansible_distribution == "Debian"
 
 - name: Install packages fro CentOS
-  package:
+  dnf:
     name: 
       - htop
       - mc
