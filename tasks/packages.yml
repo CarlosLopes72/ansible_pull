@@ -14,7 +14,7 @@
       - lsb-release
       - ca-certificates
     state: latest
-    when: ansible_distribution == "Debian"
+  when: ansible_distribution == "Debian"
 
 - name: Install packages fro CentOS
   dnf:
@@ -31,4 +31,4 @@
       - gnupg
       - ca-certificates
     state: latest
-    when: ansible_distribution == "CentOS"
+  when: ansible_distribution == "CentOS"
