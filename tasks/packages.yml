@@ -1,8 +1,9 @@
 - name: Install htop
-  apt:
+  package:
     name: 
       - htop
       - mc
       - tmux
       - tree
       - neovim
+    state: latest
