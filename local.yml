@@ -5,15 +5,15 @@
   pre_tasks:
     - name: update repository
       apt: 
-      update_cache: yes
-    changed_when: false
-    when : ansible_distribution == "Debian"
+        update_cache: yes
+      changed_when: false
+      when : ansible_distribution == "Debian"
 
     - name: update repository
       dnf: 
-      update_cache: yes 
-    changed_when: false
-    when : ansible_distribution == "CentOS"
+        update_cache: yes 
+      changed_when: false
+      when : ansible_distribution == "CentOS"
 
   tasks:
     - include: tasks/packages.yml
