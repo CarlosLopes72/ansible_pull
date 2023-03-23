@@ -6,4 +6,11 @@
       - tmux
       - tree
       - neovim
+      - locales
+      - zip
+      - unzip
+      - npm
+      - gnupg
+      - lsb-release
+      - ca-certificates
     state: latest
