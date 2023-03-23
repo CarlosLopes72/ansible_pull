@@ -1,4 +1,4 @@
-- name: Install htop
+- name: Install packages for Debian
   package:
     name: 
       - htop
@@ -14,3 +14,21 @@
       - lsb-release
       - ca-certificates
     state: latest
+    when: ansible_distribution == "Debian"
+
+- name: Install packages fro CentOS
+  package:
+    name: 
+      - htop
+      - mc
+      - tmux
+      - tree
+      - neovim
+      - locales
+      - zip
+      - unzip
+      - npm
+      - gnupg
+      - ca-certificates
+    state: latest
+    when: ansible_distribution == "CentOS"
