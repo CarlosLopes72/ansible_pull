@@ -24,7 +24,7 @@
       - tmux
       - tree
       - neovim
-      - locales
+      - glibc-common
       - zip
       - unzip
       - npm
